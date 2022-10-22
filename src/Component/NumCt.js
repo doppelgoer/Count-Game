@@ -1,5 +1,15 @@
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 export default function NumCt(props) {
+  const isPc = useMediaQuery({
+    query: "(min-width:1024px)",
+  });
+  const isTablet = useMediaQuery({
+    query: "(min-width:768px) and (max-width:1023px)",
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
   //랜덤 숫자 생성
   function shuffleRandom(n) {
     let ar = [];
@@ -117,14 +127,24 @@ export default function NumCt(props) {
       <div
         className="grid"
         style={{
+          width: "100vw",
+          height: "100vh",
           display: showWhat ? "grid" : "none",
-          gridTemplateRows: `repeat(${boxCnt},100px)`,
-          gridTemplateColumns: `repeat(${boxCnt},100px)`,
-          alignItems: "center",
+          // gridTemplateRows: `repeat(auto-fill,5em)`,
+          // gridTemplateColumns: `repeat(auto-fill,5em)`,
+          gridTemplateRows: isPc
+            ? `repeat(${boxCnt},5em)`
+            : props.chooseDif > 3
+            ? `repeat(${boxCnt},2em)`
+            : `repeat(${boxCnt},3em)`,
+          gridTemplateColumns: isPc
+            ? `repeat(${boxCnt},5em)`
+            : props.chooseDif > 3
+            ? `repeat(${boxCnt},2em)`
+            : `repeat(${boxCnt},3em)`,
+          alignContent: "center",
           justifyContent: "center",
           gap: "10px",
-          // marginTop: "100px",
-          // height: "100%",
         }}
       >
         {numBox}
