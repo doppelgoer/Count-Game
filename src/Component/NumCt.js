@@ -4,12 +4,6 @@ export default function NumCt(props) {
   const isPc = useMediaQuery({
     query: "(min-width:1024px)",
   });
-  const isTablet = useMediaQuery({
-    query: "(min-width:768px) and (max-width:1023px)",
-  });
-  const isMobile = useMediaQuery({
-    query: "(max-width:767px)",
-  });
   //랜덤 숫자 생성
   function shuffleRandom(n) {
     let ar = [];
