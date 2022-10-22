@@ -85,6 +85,7 @@ export default function NumCt(props) {
       //   props.mainGameTF = true;
       // }
     }
+    // eslint-disable-next-line
   }, [startNum]);
   function goToMain() {
     props.setMainGameTF(true);
