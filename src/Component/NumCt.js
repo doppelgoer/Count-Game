@@ -32,7 +32,7 @@ export default function NumCt(props) {
       setBoxCnt(8);
     }
     // console.log(123);
-  }, []);
+  }, [props.chooseDif]);
   useEffect(() => {
     setNumArr(shuffleRandom(boxCnt * boxCnt));
   }, [boxCnt]);
