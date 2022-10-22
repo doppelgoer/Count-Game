@@ -98,7 +98,7 @@ export default function NumCt(props) {
     <div
       style={{
         width: "100%",
-        height: "100%",
+        height: "75%",
         backgroundColor: "#101517",
         color: "rgb(225 225 225)",
         display: "flex",
@@ -122,7 +122,7 @@ export default function NumCt(props) {
         className="grid"
         style={{
           width: "100vw",
-          height: "85vh",
+          height: "100vh",
           display: showWhat ? "grid" : "none",
           // gridTemplateRows: `repeat(auto-fill,5em)`,
           // gridTemplateColumns: `repeat(auto-fill,5em)`,
