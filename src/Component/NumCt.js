@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 export default function NumCt(props) {
   //랜덤 숫자 생성
   function shuffleRandom(n) {
-    let ar = new Array();
+    let ar = [];
     let temp;
     let rnum;
     for (let i = 1; i <= n; i++) {
