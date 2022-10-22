@@ -1,4 +1,3 @@
-import { useState } from "react";
 export default function Main(props) {
   const difficult = [1, 2, 3, 4, 5];
   // const [difficult, setdifficult] = useState([1, 2, 3, 4, 5]);
