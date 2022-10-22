@@ -122,7 +122,7 @@ export default function NumCt(props) {
         className="grid"
         style={{
           width: "100vw",
-          height: "100vh",
+          height: "85vh",
           display: showWhat ? "grid" : "none",
           // gridTemplateRows: `repeat(auto-fill,5em)`,
           // gridTemplateColumns: `repeat(auto-fill,5em)`,
@@ -143,7 +143,7 @@ export default function NumCt(props) {
       >
         {numBox}
       </div>
-      <div style={{ marginTop: "30px" }}>
+      <div style={{ marginTop: "1em" }}>
         <button
           style={{
             backgroundColor: "rgb(121 124 121)" /* Green */,
